@@ -1,0 +1,190 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'PT Serif', serif;
+}
+
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.prettyline {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+table {
+    width:300px;
+    margin: 0 auto;
+}
+
+.s100 {
+  width:100%;
+}
+
+.s90 {
+  width:90%;
+}
+
+.s80 {
+  width:80%;
+}
+
+.s70 {
+  width:70%;
+}
+
+.s60 {
+  width:60%;
+}
+
+.s50 {
+  width:50%;
+}
+
+.s45 {
+  width:45%;
+}
+
+.s40 {
+  width:40%;
+}
+
+.s30 {
+  width:30%;
+}
+
+.s20 {
+  width:20%;
+}
+
+.s10 {
+  width:10%;
+}
+
+.s5 {
+  width:5%;
+}
+
+.center {
+    margin:0 auto;
+}
+
+.signup-form, .login-form {
+  padding: 40px 15px;
+  text-align: center;
+  margin-right:auto;
+  margin-left:auto;
+  width:390px;
+}
+
+.nav-pills {
+  margin-left:25px;
+}
+
+.nav-pills > li > a:hover {
+    background-color:#b4cee4;
+}
+
+.nav-pills > li > a {
+  background:#ddd;
+  width:185px;
+}
+
+.nav-pills>li.active>a {
+    background-color:#428bca;
+}
+
+@media (max-width: 960px) {
+  .signup-form, .login-form {
+    padding: 40px 15px;
+    text-align: center;
+    margin-right:auto;
+    margin-left:auto;
+    width:100%;
+  }
+  .s50, .s45, .s40, .s30, .s20, .s10, .s5 {
+    width:100%;
+  }
+  
+  .nav-pills > li > a {
+    width:100%;
+  }
+}
+
+.addclass-form {
+  padding: 40px 15px;
+  font-size:1.5em;
+}
+
+.addclass-form input, .addclass-form select {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+  height:45px;
+}
+
+ .addclass-form .day {
+  height:45px;
+}
+
+.time, .ampm, .classTimeColon {
+  margin-right:10px;
+}
+
+.time {
+  width:60px;
+  text-align: center;
+}
+
+.ampm {
+  width:90px;
+  text-align: center;
+}
+
+.classTimeColon {
+  font-size:1.0em;
+  font-weight: 900;
+  margin-top:5px;
+}
+
+.class-time input, .class-time select, .class-time span {
+  float:left;
+}
+
+.errorList {
+  list-style: none;
+  margin-top:15px;
+  text-align: center;
+  -webkit-padding-start:0px;
+}
+
+.success, .error {
+  font-size:1.3em;
+  padding-top:15px;
+}
+
+.success {
+  color: #458B00;
+}
+
+.error {
+  color: red;
+}
+
+.welcome {
+  text-transform: uppercase;
+}
