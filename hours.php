@@ -44,9 +44,14 @@ if(isset($_GET['id'])) {
                     $stmt = $db->prepare("UPDATE hours SET studyHours=?, homeworkHours=? WHERE classID=?");
                     $stmt->execute(array($_POST['study'], $_POST['homework'], $_GET['id']));
                 }
-                $output .= '<span class="success center-block" style="text-align:center;">Success!</span>';
+                $status = '<div class="s40 center-block">
+                    <span class="success bg-success center-block">Saved</span>
+                </div>';
             } catch (Exception $e) {
-                $output .= $e->getMessage();
+                $status = '<div class="s40 center-block">
+                    <span class="error bg-danger center-block">Error</span>
+                </div>';
+                //$output .= $e->getMessage();
             }
         }
         $hours["studyHours"] = $_POST["study"];
@@ -125,14 +130,15 @@ $output .= '<div class="s60 center-block">
 </div>
 
 <div class="s20 center-block">
-    <a href="main.php" class="btn btn-lg btn-danger">Go Back</a>
+    <a href="class.php?id='.$_GET['id'].'" class="btn btn-lg btn-danger">Go Back</a>
     <input type="submit" name="submit" class="btn btn-lg btn-primary pull-right" value="Save" />
 </div>
 </form>';
-print_r($errors);
-print_r($_POST);
+//print_r($errors);
+//print_r($_POST);
 ?>
     <div class="container">
+            <?php echo $status; ?>
             <?php echo $output; ?>
         </div>
     </div>
