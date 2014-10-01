@@ -179,6 +179,7 @@ table {
 
 .success {
   color: #458B00;
+  text-align: center;
 }
 
 .error {
