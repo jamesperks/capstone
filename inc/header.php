@@ -64,7 +64,7 @@ if($logged_in) {
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li<?php echo (($this_page == 'index.php') ? ' class="active"':NULL); ?>><a href="index.php">Home</a></li>
+            <li<?php echo (($this_page == 'index.php' || $this_page == 'main.php') ? ' class="active"':NULL); ?>><a href="index.php">Home</a></li>
             <?php echo $menu; ?>
           </ul>
         </div><!--/.nav-collapse -->
