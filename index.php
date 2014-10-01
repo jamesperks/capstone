@@ -7,8 +7,10 @@ if($_SESSION['logged_in'] == 1) {
 
 $createActive   = ' class="active"';
 $createActive2  = ' active in';
+
+print_r($_POST);
 if(!empty($_POST)) {
-    if($_POST['create']) {
+    if(isset($_POST['create'])) {
         $createActive   = ' class="active"';
         $createActive2  = ' active in';
         $errors = array();
