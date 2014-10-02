@@ -16,22 +16,22 @@ if(!empty($_POST)) {
         $errors = array();
         if(!empty($_POST['createUCID'])) {
             if(strlen($_POST['createUCID']) > 5) {
-                $errors[] = "Please enter a UCID less than 5 characters";
+                $errors['create']['ucid'] = "Please enter a UCID less than 5 characters";
             }
         } else {
-            $errors[] = "Please enter a UCID";
+            $errors['create']['ucid'] = "Please enter a UCID";
         } if(!filter_var($_POST['createEmail'], FILTER_VALIDATE_EMAIL)) {
-            $errors[] = "Please enter a valid email address";
+            $errors['create']['email'] = "Please enter a valid email address";
         } if(!empty($_POST['createPassword']) && !empty($_POST['createVerifyPassword'])) {
             if(strlen($_POST['createPassword']) > 5) {
                 if($_POST['createPassword'] !== $_POST['createVerifyPassword']) {
-                    $errors[] = "Passwords didn't match";
+                    $errors['create']['password'] = "Passwords didn't match";
                 }
             } else {
-                $errors[] = "Please enter a password longer than five characters";
+                $errors['create']['password'] = "Please enter a password longer than five characters";
             }
         } else {
-            $errors[] = "Please enter a password and verification";
+            $errors['create']['password'] = "Please enter a password and verification";
         }
         if(empty($errors)) {
             try {
@@ -45,13 +45,13 @@ if(!empty($_POST)) {
             } catch(Exception $e) {
                 $createOutput = "<span class=\"error\">Something went wrong. We're working on it, sit tight.</span>";
             }
-        } else {
+        } /*else {
             $createOutput = "<ul class=\"errorList\">";
             foreach($errors as $error) {
                 $createOutput .= "<li><span class=\"error\">".$error."</span></li>";
             }
             $createOutput .= "</ul>";
-        }
+        }*/
     } else {
         $loginActive   = ' class="active"';
         $loginActive2  = ' active in';
@@ -102,16 +102,19 @@ $db=null;
                 <div class="tab-pane fade<?php echo $createActive2; ?>" id="create">
                     <?php echo $createOutput; ?>
                     <form id="tab" method="post" class="form-horizontal signup-form" action="index.php">
-                        <div class="form-group">
+                        <div class="form-group<?php echo ((!isset($errors['create']['ucid'])) ? NULL:' has-error'); ?>">
                             <input type="text" name="createUCID" placeholder="UCID" class="form-control input-lg">
+                            <?php echo ((!isset($errors['create']['ucid'])) ? NULL:'<br /><p class="help-block error pull-left">'.$errors['create']['ucid'].'</p>'); ?>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group<?php echo ((!isset($errors['create']['email'])) ? NULL:' has-error'); ?>">
                             <input type="text" name="createEmail" placeholder="E-mail" class="form-control input-lg">
+                            <?php echo ((!isset($errors['create']['email'])) ? NULL:'<br /><p class="help-block error pull-left">'.$errors['create']['email'].'</p>'); ?>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group<?php echo ((!isset($errors['create']['password'])) ? NULL:' has-error'); ?>">
                             <input type="password" name="createPassword" placeholder="Password" class="form-control input-lg">
+                            <?php echo ((!isset($errors['create']['password'])) ? NULL:'<br /><p class="help-block error pull-left">'.$errors['create']['password'].'</p>'); ?>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group<?php echo ((!isset($errors['create']['password'])) ? NULL:' has-error'); ?>">
                             <input type="password" name="createVerifyPassword" placeholder="Verify Password" class="form-control input-lg">
                         </div>
                         <div class="form-group">

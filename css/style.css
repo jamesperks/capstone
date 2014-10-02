@@ -141,6 +141,12 @@ table {
   font-size:.8em;
 }
 
+.login-form .help-block, .signup-form .help-block {
+  font-size:1.2em;
+  margin-top:-10px;
+  margin-bottom:0px;
+}
+
  .addclass-form .day {
   height:45px;
 }
@@ -192,6 +198,7 @@ table {
 
 .error {
   color: red;
+  padding: 0;
 }
 
 .welcome {
@@ -271,7 +278,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 .calendar-day-head {
   background: #e0e0e0;
   font-family: 'Lato', sans-serif;
-  padding: 8px;
+  padding: 6px;
   font-size: 1.1em;
 }
 
