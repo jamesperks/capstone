@@ -137,6 +137,10 @@ table {
   height:45px;
 }
 
+.addclass-form .help-block {
+  font-size:.8em;
+}
+
  .addclass-form .day {
   height:45px;
 }
@@ -165,6 +169,10 @@ table {
   float:left;
 }
 
+.main-table th {
+  text-align: center;
+}
+
 .errorList {
   list-style: none;
   margin-top:15px;
@@ -188,4 +196,89 @@ table {
 
 .welcome {
   text-transform: uppercase;
+}
+
+.navbar-nav {
+  text-transform: uppercase;
+  font-size:1.1em;
+}
+
+/* tables */
+table.tablesorter {
+  margin:10px 0pt 15px;
+  width: 100%;
+  text-align: left;
+  font-size:1.1em;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+  background-color: #e0e0e0;
+  padding: 6px;
+}
+table.tablesorter thead tr .header {
+  background-image: url('../img/bg.gif');
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+table.tablesorter tbody td {
+  color: #3D3D3D;
+  padding: 4px;
+  vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+  background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+  background-image: url('../img/asc.gif');
+}
+table.tablesorter thead tr .headerSortDown {
+  background-image: url('../img/desc.gif');
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  background-color: #b0b0b0;
+}
+
+.main-table tbody tr.hover {
+  cursor: pointer;
+  background-color: #EBEBEB !important;
+}
+
+.main-table tbody tr td {
+  padding:12px;
+}
+
+/** calendar **/
+.calendar th {
+  text-align: center;
+}
+
+.day-number {
+  float:right;
+}
+
+.calendar-day {
+  width:100px;
+  height:120px;
+  font-size:1.3em;
+  padding:5px;
+}
+
+.calendar-class {
+  font-size:.8em;
+  float:left;
+}
+
+.calendar-day-head {
+  background: #e0e0e0;
+  font-family: 'Lato', sans-serif;
+  padding: 8px;
+  font-size: 1.1em;
+}
+
+.calendar-day-np {
+  background: #949494;
+}
+
+.calendar.table-bordered>tbody>tr>td td {
+  border: 1px solid #d9d9d9;
 }

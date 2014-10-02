@@ -8,7 +8,7 @@ if($_SESSION['logged_in'] == 1) {
 $createActive   = ' class="active"';
 $createActive2  = ' active in';
 
-print_r($_POST);
+//print_r($_POST);
 if(!empty($_POST)) {
     if(isset($_POST['create'])) {
         $createActive   = ' class="active"';
@@ -73,7 +73,7 @@ if(!empty($_POST)) {
                     $_SESSION['userid']    = $row['id'];
                     $db=null;
                     header('Location:main.php');
-                    print_r($row);
+                    //print_r($row);
                     exit;
                 } else {
                     $loginOutput = "<span class=\"error\">Incorrect username/password combination</span>";

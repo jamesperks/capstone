@@ -6,8 +6,8 @@ $this_page = basename($_SERVER['SCRIPT_NAME']);
 $logged_in = $_SESSION['logged_in'];
 if($logged_in) {
     $menu = '<li'.(($this_page == 'schedule.php') ? ' class="active"':NULL).'><a href="schedule.php">My Schedule</a></li>
-    <li'.(($this_page == 'class.php') ? ' class="active"':NULL).'><a href="class.php">Add Class</a></li>
-    <li'.(($this_page == 'editclasses.php') ? ' class="active"':NULL).'><a href="editclasses.php">Edit Classes</a></li>
+    <li'.(($this_page == 'class.php' && !isset($_GET['id'])) ? ' class="active"':NULL).'><a href="class.php">Add Class</a></li>
+    <!--<li'.(($this_page == 'class.php' && isset($_GET['id'])) ? ' class="active"':NULL).'><a href="class.php">Edit Classes</a></li>-->
     <li><a href="logout.php">Logout</a></li>';
 }
 ?>
@@ -39,6 +39,8 @@ if($logged_in) {
     <?php if($this_page == 'hours.php') echo '<script src="js/jquery.radios-to-slider.js"></script>
     
     <link rel="stylesheet" href="css/radios-to-slider.css">'; ?>
+    
+    <?php if($this_page == 'main.php') echo '<script src="js/jquery.tablesorter.min.js"></script>'; ?>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
